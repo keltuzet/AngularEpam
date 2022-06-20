@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1110px;
+  height: 100%;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f5f6fa;
+  font-family: "SourceSansPro-Bold", sans-serif;
+  font-size: 14px
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.blue-btn {
+
+}

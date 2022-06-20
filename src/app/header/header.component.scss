@@ -1,0 +1,35 @@
+.header {
+  background: #303240;
+  height: 60px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  .logo__title {
+    color: #FFFFFF;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 700;
+    text-transform: uppercase;
+
+  }
+
+  .logo__img {
+    height: 28px;
+    width: 28px;
+  }
+}
+
+.auth {
+  display: flex;
+  justify-content: space-between;
+  width: 120px
+}
