@@ -31,5 +31,19 @@
 .auth {
   display: flex;
   justify-content: space-between;
-  width: 120px
+  width: auto;
+
+  div {
+    display: inline;
+    width: 80px;
+    margin-right: 24px;
+  }
+
+  img {
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+  }
 }
