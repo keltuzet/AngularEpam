@@ -1,19 +1,21 @@
-<div class="courses-list">
-  <div class="container">
-    <div>
-      <input class="search-input" placeholder="Type to search" type="text">
-      <button class="search-btn" type="submit"><label>Search</label></button>
-    </div>
-    <div class="btn-container">
+<div class="container">
+  <div>
+    <input class="search-input" placeholder="Type to search" type="text" [(ngModel)]="searchQuery">
+    <button class="search-btn" type="submit" (click)="handleSearch()"><label>Search</label></button>
+  </div>
+  <div class="btn-container">
     <button class="add-course-btn">
-      <img src="https://svg-clipart.com/svg/sign/kDyFk8m-white-plus-vector.svg" alt="add course">
+      <img alt="add course" src="https://svg-clipart.com/svg/sign/kDyFk8m-white-plus-vector.svg">
       <label>Add Course</label>
     </button>
-    </div>
-    <ul>
-      <app-course></app-course>
-      <li class="course-load"><a href="#">Load more</a></li>
-    </ul>
-
   </div>
+  <ul *ngIf="courseList.length; else emptyList">
+    <app-course *ngFor="let course of courseList; trackBy: trackById" [course]="course" (onDeleteClick)="handleDelete($event)"></app-course>
+    <li class="course-load"><a href="#" (click)="handleLoadMore()">Load more</a></li>
+    <li class="course-load"><a href="#" (click)="handleRedefine()">Redefine Data</a></li>
+  </ul>
 </div>
+
+<ng-template #emptyList>
+  <h1>Nothing found</h1>
+</ng-template>

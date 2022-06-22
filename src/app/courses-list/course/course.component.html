@@ -1,23 +1,20 @@
 <li class="course-card">
   <div class="course-info">
     <h2 class="course-title">
-      Video Course 1. Name tag
+      {{course?.title}}
     </h2>
     <div class="course-time">
-      <p><img src="https://www.svgrepo.com/show/8869/clock.svg" alt="time">1h 28 min</p>
-      <p><img src="https://www.svgrepo.com/show/7168/calendar.svg" alt="date">08/28/2020</p>
+      <p><img src="https://www.svgrepo.com/show/8869/clock.svg" alt="duration">{{durationTime}}</p>
+      <p><img src="https://www.svgrepo.com/show/7168/calendar.svg" alt="date">{{course?.creationDate}}</p>
     </div>
   </div>
   <div class="course-info">
     <div class="course-description">
-      Learn about where you can find course descriptions, what information they include, how they work, and
-      details about various components of a course description. Course descriptions report information about a
-      university or college's classes. They're published both in course catalogs that outline degree requirements
-      and in course schedules that contain descriptions for all courses offered during a particular semester.
+      {{course?.description}}
     </div>
     <div class="course-controls">
       <button class="edit"><img alt="edit" src="https://www.svgrepo.com/show/22981/trash-can.svg">edit</button>
-      <button><img alt="delete" src="https://www.svgrepo.com/show/56967/edit.svg">delete</button>
+      <button (click)="handleDelete(course.id)"><img alt="delete" src="https://www.svgrepo.com/show/56967/edit.svg" >delete</button>
     </div>
   </div>
 </li>

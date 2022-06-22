@@ -11,6 +11,7 @@ import { AuthenticationComponent } from './header/authentication/authentication.
 import { AddCourseComponent } from './courses-list/add-course/add-course.component';
 import { SearchComponent } from './courses-list/search/search.component';
 import { ControlsComponent } from './courses-list/course/controls/controls.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -25,9 +26,10 @@ import { ControlsComponent } from './courses-list/course/controls/controls.compo
     SearchComponent,
     ControlsComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
