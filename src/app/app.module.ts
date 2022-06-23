@@ -12,6 +12,7 @@ import { AddCourseComponent } from './courses-list/add-course/add-course.compone
 import { SearchComponent } from './courses-list/search/search.component';
 import { ControlsComponent } from './courses-list/course/controls/controls.component';
 import {FormsModule} from "@angular/forms";
+import { BorderDirective } from './courses-list/course/border.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {FormsModule} from "@angular/forms";
     AuthenticationComponent,
     AddCourseComponent,
     SearchComponent,
-    ControlsComponent
+    ControlsComponent,
+    BorderDirective
   ],
     imports: [
         BrowserModule,
