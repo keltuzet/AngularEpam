@@ -8,7 +8,7 @@ export class FilterPipe implements PipeTransform {
 
   transform(courses: Course[], query: string = ''): Course[] {
 
-    if (!query) return  courses
+    if (!query.trim()) return courses
 
     return courses.filter(course => course.title.toLowerCase().includes(query.toLowerCase()))
   }
