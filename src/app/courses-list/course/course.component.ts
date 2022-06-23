@@ -14,24 +14,11 @@ export class CourseComponent implements OnInit {
 
   @Output() onDeleteClick = new EventEmitter<number>()
 
-  // public TopRated: boolean = false;
-
   constructor() {}
 
   ngOnInit(): void {
 
   }
-
-
-  get durationTime() : string | null {
-    if (this.course) {
-      return (Math.floor(this.course.duration / 60) + 'h ' + (this.course.duration % 60) + 'min')
-    } else {
-      return null
-    }
-  }
-
-
 
   handleDelete(id:number) {
     this.onDeleteClick.emit(id)

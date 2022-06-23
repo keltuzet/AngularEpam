@@ -9,10 +9,12 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CourseComponent } from './courses-list/course/course.component';
 import { AuthenticationComponent } from './header/authentication/authentication.component';
 import { AddCourseComponent } from './courses-list/add-course/add-course.component';
-import { SearchComponent } from './courses-list/search/search.component';
 import { ControlsComponent } from './courses-list/course/controls/controls.component';
 import {FormsModule} from "@angular/forms";
 import { BorderDirective } from './courses-list/course/border.directive';
+import { DurationPipe } from './courses-list/course/duration.pipe';
+import { OrderByPipe } from './courses-list/pipes/order-by.pipe';
+import { FilterPipe } from './courses-list/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,11 @@ import { BorderDirective } from './courses-list/course/border.directive';
     CourseComponent,
     AuthenticationComponent,
     AddCourseComponent,
-    SearchComponent,
     ControlsComponent,
-    BorderDirective
+    BorderDirective,
+    DurationPipe,
+    OrderByPipe,
+    FilterPipe
   ],
     imports: [
         BrowserModule,

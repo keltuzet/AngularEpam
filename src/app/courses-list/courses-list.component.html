@@ -9,13 +9,13 @@
       <label>Add Course</label>
     </button>
   </div>
-  <ul *ngIf="courseList.length; else emptyList">
-    <app-course *ngFor="let course of courseList; trackBy: trackById" [course]="course" (onDeleteClick)="handleDelete($event)"></app-course>
+  <ul *ngIf="courseList?.length; else emptyList">
+    <app-course *ngFor="let course of courseList | orderBy; trackBy: trackById" [course]="course" (onDeleteClick)="handleDelete($event)"></app-course>
     <li class="course-load"><a href="#" (click)="handleLoadMore()">Load more</a></li>
     <li class="course-load"><a href="#" (click)="handleRedefine()">Redefine Data</a></li>
   </ul>
 </div>
 
 <ng-template #emptyList>
-  <h1>Nothing found</h1>
+  <h1>No data, feel free to add new course</h1>
 </ng-template>
