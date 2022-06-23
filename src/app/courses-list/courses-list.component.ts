@@ -28,6 +28,7 @@ export class CoursesListComponent implements OnInit {
         title: 'Video Course 1. Name tag',
         creationDate: "08/28/2022",
         duration: 88,
+        TopRated: false,
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
@@ -38,6 +39,7 @@ export class CoursesListComponent implements OnInit {
         title: 'Video Course 1. Name tag',
         creationDate: "06/22/2022",
         duration: 88,
+        TopRated: false,
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
@@ -48,6 +50,7 @@ export class CoursesListComponent implements OnInit {
         title: 'Video Course 1. Name tag',
         creationDate: "08/28/2020",
         duration: 88,
+        TopRated: true,
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
@@ -78,6 +81,7 @@ export class CoursesListComponent implements OnInit {
         title: 'Video Course 1. Name tag',
         creationDate: "08/28/2020",
         duration: 88,
+        TopRated: true,
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
@@ -88,6 +92,7 @@ export class CoursesListComponent implements OnInit {
         title: 'Video Course 1. Name tag',
         creationDate: "08/28/2020",
         duration: 88,
+        TopRated: true,
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
@@ -98,6 +103,7 @@ export class CoursesListComponent implements OnInit {
         title: 'Video Course 1. Name tag',
         creationDate: "08/28/2020",
         duration: 88,
+        TopRated: false,
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +

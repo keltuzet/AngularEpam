@@ -3,5 +3,6 @@ export interface Course {
   title: string
   creationDate: string
   duration: number
+  TopRated: boolean
   description: string
 }

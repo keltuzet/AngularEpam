@@ -1,7 +1,8 @@
-<li class="course-card" [appBorder]="course?.creationDate">
+<li class="course-card" [appBorder]="course?.creationDate" [ngClass]="{TopRated: course?.TopRated}">
   <div class="course-info">
     <h2 class="course-title">
       {{course?.title}}
+      <img src="./assets/icons/star.svg" alt="Top Rated" *ngIf="course?.TopRated">
     </h2>
     <div class="course-time">
       <p><img src="https://www.svgrepo.com/show/8869/clock.svg" alt="duration">{{durationTime}}</p>

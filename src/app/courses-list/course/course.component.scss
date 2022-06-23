@@ -21,6 +21,12 @@
     text-align: left;
     font-weight: 600;
     height: 31px;
+
+    img {
+      margin-left: 5px;
+      height: 25px;
+      width: 25px;
+    }
   }
 
   .course-time {
@@ -90,4 +96,8 @@
 ul {
   list-style-type: none;
   padding: 0;
+}
+
+.TopRated {
+  background-color: lightyellow;
 }

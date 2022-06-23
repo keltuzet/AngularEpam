@@ -14,9 +14,12 @@ export class CourseComponent implements OnInit {
 
   @Output() onDeleteClick = new EventEmitter<number>()
 
+  // public TopRated: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {
+
   }
 
 
@@ -27,6 +30,8 @@ export class CourseComponent implements OnInit {
       return null
     }
   }
+
+
 
   handleDelete(id:number) {
     this.onDeleteClick.emit(id)
