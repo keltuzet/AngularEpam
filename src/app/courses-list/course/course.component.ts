@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Course} from "./course.model";
+import {CourseListService} from "../services/course-list.service";
 
 
 @Component({
@@ -14,7 +15,7 @@ export class CourseComponent implements OnInit {
 
   @Output() onDeleteClick = new EventEmitter<number>()
 
-  constructor() {}
+  constructor(public courseService: CourseListService) {}
 
   ngOnInit(): void {
 

@@ -15,6 +15,14 @@ import { BorderDirective } from './courses-list/course/border.directive';
 import { DurationPipe } from './courses-list/course/duration.pipe';
 import { OrderByPipe } from './courses-list/pipes/order-by.pipe';
 import { FilterPipe } from './courses-list/pipes/filter.pipe';
+import {Routes, RouterModule} from "@angular/router";
+
+const routes: Routes = [
+  {path: 'courses', component: CoursesListComponent},
+  {path: 'login', component: AuthenticationComponent},
+  {path: '', redirectTo: 'courses', pathMatch: 'full'},
+  // {path: '**', redirectTo: 'courses'}
+]
 
 @NgModule({
   declarations: [
@@ -34,9 +42,13 @@ import { FilterPipe } from './courses-list/pipes/filter.pipe';
   ],
     imports: [
         BrowserModule,
-        FormsModule
+        FormsModule,
+        RouterModule.forRoot(routes)
+
     ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+

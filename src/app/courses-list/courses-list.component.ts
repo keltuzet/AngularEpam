@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Course} from "./course/course.model";
 import {FilterPipe} from "./pipes/filter.pipe";
+import {CourseListService} from "./services/course-list.service";
+import {AuthService} from "../header/authentication/services/auth.service";
 
 @Component({
   selector: 'app-courses-list',
@@ -9,62 +11,28 @@ import {FilterPipe} from "./pipes/filter.pipe";
 })
 export class CoursesListComponent implements OnInit {
 
-  courseList!: Course[];
-
-  public handleDelete = (id: number) => {
-    console.log(id)
-  }
 
   public searchQuery: string = ''
 
 
-  constructor() {
+  constructor(public courseListService: CourseListService) {
   }
 
+  courseList: Course[];
+
   ngOnInit(): void {
-    console.log(`ngOnInit`);
-    this.courseList = [
-      {
-        id: 111,
-        title: 'Video Course 2. Name tag',
-        creationDate: new Date(2021, 8, 8),
-        duration: 88,
-        TopRated: false,
-        description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
-          '      details about various components of a course description. Course descriptions report information about a\n' +
-          '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
-      },
-      {
-        id: 222,
-        title: 'Video Course 3. Best ed',
-        creationDate: new Date(2022, 5, 22),
-        duration: 88,
-        TopRated: false,
-        description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
-          '      details about various components of a course description. Course descriptions report information about a\n' +
-          '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
-      },
-      {
-        id: 333,
-        title: 'Video Course 1. Best op',
-        creationDate:  new Date(2020, 7, 28),
-        duration: 88,
-        TopRated: true,
-        description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
-          '      details about various components of a course description. Course descriptions report information about a\n' +
-          '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
-      }
-    ]
+    this.courseList = this.courseListService.getList()
   }
 
   handleSearch(): void {
     let filter = new FilterPipe()
     this.courseList = filter.transform(this.courseList, this.searchQuery)
-    console.log(this.searchQuery)
     this.searchQuery = ''
+  }
+
+  handleDelete = (id: number) => {
+    this.courseListService.removeCourse(id)
+    this.courseList = this.courseListService.getList()
   }
 
   handleLoadMore(): void {
@@ -76,70 +44,10 @@ export class CoursesListComponent implements OnInit {
   }
 
 
-
-  handleRedefine(): void {
-    this.courseList = [
-      {
-        id: 111,
-        title: 'Video Course 2. Name tag',
-        creationDate: new Date(2021, 8, 8),
-        duration: 88,
-        TopRated: true,
-        description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
-          '      details about various components of a course description. Course descriptions report information about a\n' +
-          '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
-      },
-      {
-        id: 222,
-        title: 'Video Course 3. Best ed',
-        creationDate: new Date(2022, 5, 22),
-        duration: 88,
-        TopRated: false,
-        description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
-          '      details about various components of a course description. Course descriptions report information about a\n' +
-          '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
-      },
-      {
-        id: 333,
-        title: 'Video Course 1. Best op',
-        creationDate:  new Date(2020, 7, 28),
-        duration: 88,
-        TopRated: true,
-        description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
-          '      details about various components of a course description. Course descriptions report information about a\n' +
-          '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
-      }
-    ]
+  handleRedefine() {
+    this.courseList = this.courseListService.handleRedefine()
   }
 
-  ngOnChanges() {
-    console.log(`OnChanges`);
-  }
 
-  ngDoCheck() {
-    console.log(`ngDoCheck`);
-  }
 
-  ngAfterViewInit() {
-    console.log(`ngAfterViewInit`);
-  }
-
-  ngAfterViewChecked() {
-    console.log(`ngAfterViewChecked`);
-  }
-
-  ngAfterContentInit() {
-    console.log(`ngAfterContentInit`);
-  }
-
-  ngAfterContentChecked() {
-    console.log(`ngAfterContentChecked`);
-  }
-
-  ngOnDestroy() {
-    console.log(`ngOnDestroy`)
-  }
 }

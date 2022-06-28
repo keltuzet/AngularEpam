@@ -1,7 +1,8 @@
+<app-breadcrumbs></app-breadcrumbs>
 <div class="container">
   <div>
-    <input class="search-input" placeholder="Type to search" type="text" [(ngModel)]="searchQuery">
-    <button class="search-btn" type="submit" (click)="handleSearch()"><label>Search</label></button>
+    <input [(ngModel)]="searchQuery" class="search-input" placeholder="Type to search" type="text">
+    <button (click)="handleSearch()" class="search-btn" type="submit"><label>Search</label></button>
   </div>
   <div class="btn-container">
     <button class="add-course-btn">
@@ -10,9 +11,10 @@
     </button>
   </div>
   <ul *ngIf="courseList?.length; else emptyList">
-    <app-course *ngFor="let course of courseList | orderBy; trackBy: trackById" [course]="course" (onDeleteClick)="handleDelete($event)"></app-course>
-    <li class="course-load"><a href="#" (click)="handleLoadMore()">Load more</a></li>
-    <li class="course-load"><a href="#" (click)="handleRedefine()">Redefine Data</a></li>
+    <app-course (onDeleteClick)="handleDelete($event)" *ngFor="let course of courseList | orderBy; trackBy: trackById"
+                [course]="course"></app-course>
+    <li class="course-load"><a (click)="handleLoadMore()" href="#">Load more</a></li>
+    <li class="course-load"><a (click)="handleRedefine()" href="#">Redefine Data</a></li>
   </ul>
 </div>
 

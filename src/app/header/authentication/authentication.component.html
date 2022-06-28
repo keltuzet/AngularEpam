@@ -1,1 +1,25 @@
-<p>authentication works!</p>
+<div class="container">
+<form class="login-form">
+
+  <div class="login-title">Login</div>
+
+  <div class="form-field">
+    <p class="form-field__description">Email:</p>
+    <p style="font-size: 12px">* required</p>
+    <input class="login-input" placeholder="Enter e-mail" type="text" [(ngModel)]="email">
+  </div>
+
+  <div class="form-field">
+    <p class="form-field__description">Password:</p>
+    <p style="font-size: 12px">* required</p>
+    <input class="login-input" placeholder="Enter password" type="text" [(ngModel)]="password" >
+  </div>
+
+  <div class="form-submit">
+    <a href="#">Forgot password?</a>
+    <button type="submit">Login</button>
+  </div>
+
+
+</form>
+</div>
