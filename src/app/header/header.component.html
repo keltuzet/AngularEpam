@@ -8,13 +8,13 @@
     </a>
 
     <div *ngIf="!loginPage; else noContent" class="auth">
-      <a class="login-btn" routerLink="/login" routerLinkActive="active">
+      <a *ngIf="!isAuthenticated; else email" class="login-btn" routerLink="/login" routerLinkActive="active">
         <div>
           <img alt="log in" src="https://www.svgrepo.com/show/3130/user.svg">User login
         </div>
       </a>
 
-      <a class="logout-btn" href="#">
+      <a class="logout-btn" routerLink="/login" routerLinkActive="active" (click)="onLogoutClick()">
         <div>
           <img alt="log out" src="https://www.svgrepo.com/show/3130/user.svg">Log out
         </div>
@@ -24,4 +24,7 @@
   </div>
 </div>
 <ng-template #noContent></ng-template>
+<ng-template #email>
+  <div class="user-email">{{userEmail}}</div>
+</ng-template>
 

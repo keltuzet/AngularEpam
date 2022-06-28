@@ -6,20 +6,22 @@
   <div class="form-field">
     <p class="form-field__description">Email:</p>
     <p style="font-size: 12px">* required</p>
-    <input class="login-input" placeholder="Enter e-mail" type="text" [(ngModel)]="email">
+    <input class="login-input" placeholder="Enter e-mail" type="text" [(ngModel)]="email" name="email">
   </div>
 
   <div class="form-field">
     <p class="form-field__description">Password:</p>
     <p style="font-size: 12px">* required</p>
-    <input class="login-input" placeholder="Enter password" type="text" [(ngModel)]="password" >
+    <input class="login-input" placeholder="Enter password" type="text" [(ngModel)]="password" name="password">
   </div>
 
   <div class="form-submit">
     <a href="#">Forgot password?</a>
-    <button type="submit">Login</button>
+    <button type="button" (click)="onLoginClick()">Login</button>
   </div>
 
+  <button style="font-size: 8px" (click)="onAuthCheck()">isAuth</button>
+  <button style="font-size: 8px" (click)="onLogEmail()">logEmail</button>
 
 </form>
 </div>

@@ -8,14 +8,30 @@ import {AuthService} from "./authentication/services/auth.service";
 })
 export class HeaderComponent implements OnInit {
 
+  loginPage: boolean;
+  userEmail: string;
+  isAuthenticated: boolean;
+
+
+
   constructor(public authService: AuthService) {
   }
 
-  loginPage: boolean;
 
 
   ngOnInit(): void {
     this.authService.getPageStatus()
-      .subscribe(status => this.loginPage = status)
+      .subscribe(pageStatus => this.loginPage = pageStatus)
+
+    this.authService.logEmail()
+      .subscribe(email => this.userEmail = email)
+
+    this.authService.isAuthenticatedCheck()
+      .subscribe(isAuth => this.isAuthenticated = isAuth)
+    console.log('header', this.isAuthenticated)
+  }
+
+  onLogoutClick() {
+    this.authService.logout()
   }
 }

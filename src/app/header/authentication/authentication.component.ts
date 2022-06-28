@@ -9,9 +9,11 @@ import {AuthService} from "./services/auth.service";
 export class AuthenticationComponent implements OnInit, OnDestroy {
 
   email: string;
-  password: string
-
+  password: string;
   constructor(public authService: AuthService) { }
+
+
+
 
 
   ngOnInit(): void {
@@ -20,6 +22,20 @@ export class AuthenticationComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.authService.updatePageStatus(false)
+  }
+
+  onLoginClick() {
+    this.authService.login(this.email, this.password)
+    this.email = this.password = null
+  }
+
+  onAuthCheck() {
+    this.authService.isAuthenticatedCheck()
+
+  }
+
+  onLogEmail() {
+    this.authService.logEmail()
   }
 
 }
