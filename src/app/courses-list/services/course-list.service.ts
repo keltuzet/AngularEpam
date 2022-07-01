@@ -22,7 +22,8 @@ export class CourseListService {
       description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
         '      details about various components of a course description. Course descriptions report information about a\n' +
         '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-        '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
+        '      and in course schedules that contain descriptions for all courses offered during a particular semester.',
+      authors: ''
     },
     {
       authors: '',
@@ -34,7 +35,8 @@ export class CourseListService {
       description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
         '      details about various components of a course description. Course descriptions report information about a\n' +
         '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-        '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
+        '      and in course schedules that contain descriptions for all courses offered during a particular semester.',
+      authors: ''
     },
     {
       authors: '',
@@ -46,7 +48,8 @@ export class CourseListService {
       description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
         '      details about various components of a course description. Course descriptions report information about a\n' +
         '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-        '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
+        '      and in course schedules that contain descriptions for all courses offered during a particular semester.',
+      authors: ''
     }
   ]
 
@@ -96,7 +99,8 @@ export class CourseListService {
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
+          '      and in course schedules that contain descriptions for all courses offered during a particular semester.',
+        authors: ''
       },
       {
         authors: '',
@@ -108,8 +112,10 @@ export class CourseListService {
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
+          '      and in course schedules that contain descriptions for all courses offered during a particular semester.',
+        authors: ''
       },
+
       {
         authors: '',
         id: 333,
@@ -120,7 +126,8 @@ export class CourseListService {
         description: 'Learn about where you can find course descriptions, what information they include, how they work, and\n' +
           '      details about various components of a course description. Course descriptions report information about a\n' +
           '      university or college\'s classes. They\'re published both in course catalogs that outline degree requirements\n' +
-          '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
+          '      and in course schedules that contain descriptions for all courses offered during a particular semester.',
+        authors: ''
       }
     ]
   }

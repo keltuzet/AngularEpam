@@ -26,6 +26,7 @@
     "strictNullChecks": false
   },
   "angularCompilerOptions": {
+    "aot": true,
     "compilationMode" : "full",
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
