@@ -7,7 +7,8 @@ import {Router} from "@angular/router";
 })
 export class AuthService {
 
-  constructor(public router: Router) { }
+  constructor(public router: Router) {
+  }
 
   private loginPage: BehaviorSubject<boolean> = new BehaviorSubject(false)
   private userEmail: BehaviorSubject<string> = new BehaviorSubject(null)
@@ -18,6 +19,7 @@ export class AuthService {
 
     localStorage.setItem('email', email)
     localStorage.setItem('password', password)
+    console.log('logged in successfully')
 
     this.userEmail.next(email)
     this.isAuthenticated.next(true)

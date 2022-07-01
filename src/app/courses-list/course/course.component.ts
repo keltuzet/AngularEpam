@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Course} from "./course.model";
 import {CourseListService} from "../services/course-list.service";
 
@@ -6,25 +6,26 @@ import {CourseListService} from "../services/course-list.service";
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
-  styleUrls: ['./course.component.scss']
+  styleUrls: ['./course.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class CourseComponent implements OnInit {
 
-  @Input() course!: Course ;
+  @Input() course: Course;
 
   @Output() onDeleteClick = new EventEmitter<number>()
 
-  constructor(public courseService: CourseListService) {}
+  constructor() {}
 
   ngOnInit(): void {
 
   }
 
+  onEditClick(id: number) {}
+
   handleDelete(id:number) {
     this.onDeleteClick.emit(id)
   }
-
-
 
 }

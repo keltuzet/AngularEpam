@@ -16,11 +16,14 @@ import { DurationPipe } from './courses-list/course/duration.pipe';
 import { OrderByPipe } from './courses-list/pipes/order-by.pipe';
 import { FilterPipe } from './courses-list/pipes/filter.pipe';
 import {Routes, RouterModule} from "@angular/router";
+import { DateInputComponent } from './courses-list/course/controls/date-input/date-input.component';
+import { DurationInputComponent } from './courses-list/course/controls/duration-input/duration-input.component';
 
 const routes: Routes = [
   {path: 'courses', component: CoursesListComponent},
   {path: 'login', component: AuthenticationComponent},
-  {path: '', redirectTo: 'courses', pathMatch: 'full'},
+  {path: 'edit', component: ControlsComponent},
+  {path: '', redirectTo: 'courses', pathMatch: 'full'}
   // {path: '**', redirectTo: 'courses'}
 ]
 
@@ -38,7 +41,9 @@ const routes: Routes = [
     BorderDirective,
     DurationPipe,
     OrderByPipe,
-    FilterPipe
+    FilterPipe,
+    DateInputComponent,
+    DurationInputComponent
   ],
     imports: [
         BrowserModule,

@@ -1,0 +1,45 @@
+
+p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 0 0;
+  font-family: "SourceSansPro-Semibold", sans-serif;
+  font-weight: 600;
+}
+
+.form-field {
+  display: flex;
+  flex-flow: row wrap;
+
+
+}
+
+.p-wrapper {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+input {
+  height: 36px;
+  width: 150px;
+  margin: 8px 0 12px 0;
+  border: 1px solid #CED0DB;
+  padding: 0 0 0 7px;
+}
+
+
+.required {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.calc-duration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}

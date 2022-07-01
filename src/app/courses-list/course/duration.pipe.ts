@@ -9,6 +9,8 @@ export class DurationPipe implements PipeTransform {
     const hours = this.getHours(value)
     const minutes = this.getMinutes(value)
 
+    if(!value) return ''
+
     if (hours) {
       return hours + minutes
     } else

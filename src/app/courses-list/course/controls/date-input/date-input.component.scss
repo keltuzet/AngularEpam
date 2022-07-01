@@ -1,0 +1,39 @@
+.date-input {
+  background: url("https://www.svgrepo.com/show/7168/calendar.svg") no-repeat 95% 40%;
+  background-size: 16px;
+  cursor: pointer;
+  border: 1px solid #CED0DB;
+}
+
+p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 0 0;
+  font-family: "SourceSansPro-Semibold", sans-serif;
+  font-weight: 600;
+}
+
+.form-field {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-content: space-between;
+}
+
+.timings {
+  width: 150px;
+
+  input {
+    height: 36px;
+    width: 150px;
+    margin: 8px 0 12px 0;
+    padding: 0 0 0 7px;
+  }
+}
+
+.required {
+  font-size: 12px;
+  font-weight: 400;
+}

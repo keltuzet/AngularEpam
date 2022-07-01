@@ -3,6 +3,7 @@ import {Course} from "./course/course.model";
 import {FilterPipe} from "./pipes/filter.pipe";
 import {CourseListService} from "./services/course-list.service";
 import {AuthService} from "../header/authentication/services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-courses-list',
@@ -15,7 +16,7 @@ export class CoursesListComponent implements OnInit {
   public searchQuery: string = ''
 
 
-  constructor(public courseListService: CourseListService) {
+  constructor(public courseListService: CourseListService, public router: Router) {
   }
 
   courseList: Course[];
@@ -48,6 +49,8 @@ export class CoursesListComponent implements OnInit {
     this.courseList = this.courseListService.handleRedefine()
   }
 
-
+  onAddCourseClick() {
+    this.router.navigate(['edit'])
+  }
 
 }

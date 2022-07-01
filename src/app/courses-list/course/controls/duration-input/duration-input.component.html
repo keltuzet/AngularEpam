@@ -1,0 +1,11 @@
+<div class="form-field timings">
+  <div class="p-wrapper">
+    <p>Duration: </p>
+    <p class="required">* required</p>
+  </div>
+</div>
+<div class="calc-duration">
+  <input class='duration-input' type="text" placeholder="minutes" [(ngModel)]="durationInput"> <p>{{durationInput | duration}}</p>
+</div>
+
+
