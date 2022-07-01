@@ -22,7 +22,7 @@ import { DurationInputComponent } from './courses-list/course/controls/duration-
 const routes: Routes = [
   {path: 'courses', component: CoursesListComponent},
   {path: 'login', component: AuthenticationComponent},
-  {path: 'edit', component: ControlsComponent},
+  {path: 'edit', component: AddCourseComponent},
   {path: '', redirectTo: 'courses', pathMatch: 'full'}
   // {path: '**', redirectTo: 'courses'}
 ]

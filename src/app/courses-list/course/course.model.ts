@@ -5,4 +5,5 @@ export interface Course {
   duration: number
   TopRated: boolean
   description: string
+  authors: string
 }

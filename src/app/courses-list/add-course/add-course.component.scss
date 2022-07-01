@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 60px);
+  justify-content: center;
+
+  .edit-form {
+    border-radius: 6px;
+    background: #FFFFFF;
+    box-shadow: 0 1px 2px 0 rgba(29, 30, 38, 0.10), 0 2px 10px 0 rgba(29, 30, 38, 0.15);
+    height: 636px;
+    width: 730px;
+    padding: 24px 25px 32px 25px;
+
+    .form-field {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: row wrap;
+      align-content: space-between;
+    }
+
+    .title {
+      width: 681px;
+
+      input {
+        height: 36px;
+        width: 681px;
+      }
+    }
+
+
+    .description {
+      width: 680px;
+
+      textarea {
+        text-align: left;
+        width: 680px;
+        height: 108px;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        padding: 9px 0 0 7px;
+        line-height: 18px;
+        font-size: 14px;
+        font-family: "SourceSansPro-Regular", sans-serif;
+        text-transform: none;
+        border:  1px solid #CED0DB;
+
+      }
+    }
+
+    .timings {
+      width: 150px;
+
+      input {
+        height: 36px;
+        width: 150px;
+      }
+    }
+
+    .authors {
+      width: 310px;
+
+      input {
+        height: 36px;
+        width: 312px;
+      }
+    }
+  }
+}
+
+p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 0 0;
+  font-family: "SourceSansPro-Semibold", sans-serif;
+  font-weight: 600;
+}
+
+input {
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  padding: 0 0 0 7px;
+  line-height: 18px;
+  color: #ACAFBF;
+  font-size: 14px;
+  font-family: "SourceSansPro-Regular", sans-serif;
+  text-transform: none;
+  text-align: left;
+  border:  1px solid #CED0DB;
+}
+
+h2 {
+  margin: 0 0 24px 0
+}
+
+//.date-input {
+//  background: url("https://www.svgrepo.com/show/7168/calendar.svg") no-repeat 95% 40%;
+//  background-size: 16px;
+//  cursor: pointer;
+//  border: 1px solid #CED0DB;
+//}
+
+.required {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.buttons-block {
+  justify-content: flex-end;
+
+  .cancel-button {
+    border: none;
+    border-radius: 3px;
+    background: rgba(18,21,35,0.20);
+    height: 36px;
+    width: 76px;
+    margin-right: 12px;
+
+    label {
+      line-height: 30px;
+      letter-spacing: -0.08px;
+      color: #5B616F;
+      font-size: 14px;
+      font-family: "SourceSansPro-Semibold", sans-serif;
+      text-transform: none;
+      text-align: left;
+      font-weight: 500;
+      height: 30px;
+      width: 40px;
+    }
+  }
+
+  .save-button {
+    border: none;
+    border-radius: 3px;
+    background: #67A300;
+    height: 36px;
+    width: 64px;
+
+    label {
+      line-height: 30px;
+      letter-spacing: -0.08px;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-family: "SourceSansPro-Semibold", sans-serif;
+      text-transform: none;
+      text-align: left;
+      font-weight: 500;
+      height: 30px;
+      width: 29px;
+    }
+  }
+}

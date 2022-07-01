@@ -5,7 +5,8 @@
   </div>
 </div>
 <div class="calc-duration">
-  <input class='duration-input' type="text" placeholder="minutes" [(ngModel)]="durationInput"> <p>{{durationInput | duration}}</p>
+  <input name="duration-input" class='duration-input' type="text" placeholder="minutes"
+         [(ngModel)]="courseDuration" (change)="onInputChange(courseDuration)"> <p>{{courseDuration | duration}}</p>
 </div>
 
 

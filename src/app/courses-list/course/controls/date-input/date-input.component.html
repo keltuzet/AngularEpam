@@ -1,5 +1,6 @@
 <div class="form-field timings" >
   <p>Date: </p>
   <p class="required">* required</p>
-  <input class='date-input' type="text" placeholder="MM/DD/YYYY">
+  <input name='course-date' class='date-input' type="text" placeholder="MM/DD/YYYY"
+         [(ngModel)]="courseDate" (change)="onInputChange(courseDate)">
 </div>

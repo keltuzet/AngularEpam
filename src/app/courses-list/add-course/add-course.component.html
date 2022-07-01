@@ -1,1 +1,49 @@
-<p>add-course works!</p>
+<div class="container" (click)="onClick()">
+  <form class="edit-form">
+    <h2>New Course</h2>
+
+    <div class="form-field title">
+      <p>Title: </p>
+      <p class="required">* required</p>
+      <input name="course-title" class='title-input' type="text" placeholder="Text input" [(ngModel)]="courseTitle">
+    </div>
+
+    <div class="form-field description">
+      <p>Description: </p>
+      <p class="required">* required</p>
+      <textarea name="course-description" class='description-input' placeholder="Add description"
+                [(ngModel)]="courseDescription">{{courseDescription}}</textarea>
+    </div>
+
+    <!--  <div class="form-field timings">-->
+    <!--    <p>Duration: </p>-->
+    <!--    <p class="required">* required</p>-->
+    <!--    <input class='duration-input' type="text" placeholder="minutes">-->
+    <!--  </div>-->
+    <app-duration-input (courseDurationChange)="onDurationChange($event)"></app-duration-input>
+
+    <!--  <div class="form-field timings" >-->
+    <!--    <p>Date: </p>-->
+    <!--    <p class="required">* required</p>-->
+    <!--    <input class='date-input' type="text" placeholder="MM/DD/YYYY">-->
+    <!--  </div>-->
+    <app-date-input (courseDateChange)="onDateChange($event)"></app-date-input>
+
+    <div class="form-field authors">
+      <p>Authors: </p>
+      <p class="required">* required</p>
+      <input name="course-authors" class='authors-input' type="text" placeholder="Start typing" [(ngModel)]="courseAuthors">
+    </div>
+
+    <div class="buttons-block">
+      <button class="cancel-button" type="button" (click)="onCancelClick()" ><<label>Cancel</label></button>
+      <button class="save-button" type="button" (click)="onSaveClick()"><label>Save</label></button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
