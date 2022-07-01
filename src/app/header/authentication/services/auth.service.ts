@@ -29,17 +29,15 @@ export class AuthService {
     }
   }
 
+  // Curly brackets are necessary
   logout() {
-    if (this.isAuthenticated.getValue() && this.userEmail.getValue())
-
-    console.log('Logout', localStorage.getItem('email'))
+    if (this.isAuthenticated.getValue() && this.userEmail.getValue()) console.log('Logout', localStorage.getItem('email'))
 
     localStorage.removeItem('email')
     localStorage.removeItem('password')
 
     this.userEmail.next(null)
     this.isAuthenticated.next(false)
-
   }
 
   getPageStatus() {

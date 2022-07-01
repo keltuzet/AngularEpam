@@ -18,6 +18,7 @@ import { FilterPipe } from './courses-list/pipes/filter.pipe';
 import {Routes, RouterModule} from "@angular/router";
 import { DateInputComponent } from './courses-list/course/controls/date-input/date-input.component';
 import { DurationInputComponent } from './courses-list/course/controls/duration-input/duration-input.component';
+import { CourseListService } from './courses-list/services/course-list.service';
 
 const routes: Routes = [
   {path: 'courses', component: CoursesListComponent},
@@ -52,7 +53,7 @@ const routes: Routes = [
 
     ],
   exports: [RouterModule],
-  providers: [],
+  providers: [CourseListService, FilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

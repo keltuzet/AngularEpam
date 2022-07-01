@@ -5,6 +5,13 @@ import {CourseListService} from "./services/course-list.service";
 import {AuthService} from "../header/authentication/services/auth.service";
 import {Router} from "@angular/router";
 
+// 1. event Click, Mousein
+// 2. @Input
+// 3. async
+
+// 1. Observable, Promise subscribe
+// 2. Settimeout
+
 @Component({
   selector: 'app-courses-list',
   templateUrl: './courses-list.component.html',
@@ -16,18 +23,19 @@ export class CoursesListComponent implements OnInit {
   public searchQuery: string = ''
 
 
-  constructor(public courseListService: CourseListService, public router: Router) {
+  constructor(public courseListService: CourseListService, public router: Router, private filterPipe: FilterPipe) {
   }
 
+  // Place before constructor
   courseList: Course[];
 
   ngOnInit(): void {
     this.courseList = this.courseListService.getList()
   }
 
+  // Provide FilterPipe
   handleSearch(): void {
-    let filter = new FilterPipe()
-    this.courseList = filter.transform(this.courseList, this.searchQuery)
+    this.courseList = this.filterPipe.transform(this.courseList, this.searchQuery)
     this.searchQuery = ''
   }
 

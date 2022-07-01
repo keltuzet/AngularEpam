@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Course} from "../course/course.model";
 
-@Injectable({
-  providedIn: 'root'
-})
+// Missing return types of methods
+
+
+@Injectable()
 export class CourseListService {
 
 
@@ -12,6 +13,7 @@ export class CourseListService {
 
   public courseList: Course[] = [
     {
+      authors: '',
       id: 111,
       title: 'Video Course 2. Name tag',
       creationDate: new Date(2021, 8, 8),
@@ -23,6 +25,7 @@ export class CourseListService {
         '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
     },
     {
+      authors: '',
       id: 222,
       title: 'Video Course 3. Best ed',
       creationDate: new Date(2022, 5, 22),
@@ -34,6 +37,7 @@ export class CourseListService {
         '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
     },
     {
+      authors: '',
       id: 333,
       title: 'Video Course 1. Best op',
       creationDate: new Date(2020, 7, 28),
@@ -50,17 +54,20 @@ export class CourseListService {
     return this.courseList
   }
 
+  // Missing createCourse implementation
   createCourse() {
 
   }
 
+  // Should return item of array
   getCourseById(id: number) {
-    return this.getList().filter(el => {
+    return this.getList().find(el => {
       return el.id === id
     })
 
   }
 
+  // Missing createCourse implementation
   updateCourse() {
 
   }
@@ -80,6 +87,7 @@ export class CourseListService {
   handleRedefine(): Course[] {
     return [
       {
+        authors: '',
         id: 111,
         title: 'Video Course 2. Name tag',
         creationDate: new Date(2021, 8, 8),
@@ -91,6 +99,7 @@ export class CourseListService {
           '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
       },
       {
+        authors: '',
         id: 222,
         title: 'Video Course 3. Best ed',
         creationDate: new Date(2022, 5, 22),
@@ -102,6 +111,7 @@ export class CourseListService {
           '      and in course schedules that contain descriptions for all courses offered during a particular semester.'
       },
       {
+        authors: '',
         id: 333,
         title: 'Video Course 1. Best op',
         creationDate: new Date(2020, 7, 28),

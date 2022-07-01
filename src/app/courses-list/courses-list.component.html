@@ -1,3 +1,4 @@
+<!-- Missing ifAuthenticated directive -->
 <app-breadcrumbs></app-breadcrumbs>
 <div class="container">
   <div>
@@ -10,6 +11,7 @@
       <label>Add Course</label>
     </button>
   </div>
+  <!-- Use div instead of ul -->
   <ul *ngIf="courseList?.length; else emptyList">
     <app-course (onDeleteClick)="handleDelete($event)" *ngFor="let course of courseList | orderBy; trackBy: trackById"
                 [course]="course"></app-course>
